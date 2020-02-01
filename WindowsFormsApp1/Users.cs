@@ -16,5 +16,23 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void Users_Load(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.tableAdapterManager.UpdateAll(this.moneyDataSet);
+
+        }
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -37,22 +37,23 @@
             this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
             this.domainUpDown2 = new System.Windows.Forms.DomainUpDown();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categotyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thinkDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.payDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rasnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.commentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.monthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.yearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.planBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.moneyDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.moneyDataSet = new WindowsFormsApp1.MoneyDataSet();
+            this.planTableAdapter = new WindowsFormsApp1.MoneyDataSetTableAdapters.PlanTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.planBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moneyDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moneyDataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(17, 48);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Обновить";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -117,7 +118,7 @@
             this.domainUpDown1.Name = "domainUpDown1";
             this.domainUpDown1.Size = new System.Drawing.Size(55, 20);
             this.domainUpDown1.TabIndex = 8;
-            this.domainUpDown1.Text = "domainUpDown1";
+            this.domainUpDown1.Text = "1";
             // 
             // domainUpDown2
             // 
@@ -131,52 +132,110 @@
             this.domainUpDown2.Name = "domainUpDown2";
             this.domainUpDown2.Size = new System.Drawing.Size(55, 20);
             this.domainUpDown2.TabIndex = 9;
-            this.domainUpDown2.Text = "domainUpDown2";
+            this.domainUpDown2.Text = "2020";
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5});
+            this.idDataGridViewTextBoxColumn,
+            this.categotyDataGridViewTextBoxColumn,
+            this.thinkDataGridViewTextBoxColumn,
+            this.payDataGridViewTextBoxColumn,
+            this.rasnDataGridViewTextBoxColumn,
+            this.commentDataGridViewTextBoxColumn,
+            this.monthDataGridViewTextBoxColumn,
+            this.yearDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.planBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(111, 48);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(543, 337);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(884, 337);
             this.dataGridView1.TabIndex = 11;
             // 
-            // Column1
+            // idDataGridViewTextBoxColumn
             // 
-            this.Column1.HeaderText = "Категория";
-            this.Column1.Name = "Column1";
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "№";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // Column2
+            // categotyDataGridViewTextBoxColumn
             // 
-            this.Column2.HeaderText = "Расход(План)";
-            this.Column2.Name = "Column2";
+            this.categotyDataGridViewTextBoxColumn.DataPropertyName = "Categoty";
+            this.categotyDataGridViewTextBoxColumn.HeaderText = "Категория";
+            this.categotyDataGridViewTextBoxColumn.Name = "categotyDataGridViewTextBoxColumn";
+            this.categotyDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // Column3
+            // thinkDataGridViewTextBoxColumn
             // 
-            this.Column3.HeaderText = "Расход(Факт)";
-            this.Column3.Name = "Column3";
+            this.thinkDataGridViewTextBoxColumn.DataPropertyName = "Think";
+            this.thinkDataGridViewTextBoxColumn.HeaderText = "Расход(План)";
+            this.thinkDataGridViewTextBoxColumn.Name = "thinkDataGridViewTextBoxColumn";
+            this.thinkDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // Column4
+            // payDataGridViewTextBoxColumn
             // 
-            this.Column4.HeaderText = "Разница";
-            this.Column4.Name = "Column4";
+            this.payDataGridViewTextBoxColumn.DataPropertyName = "Pay";
+            this.payDataGridViewTextBoxColumn.HeaderText = "Расход(Факт)";
+            this.payDataGridViewTextBoxColumn.Name = "payDataGridViewTextBoxColumn";
+            this.payDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // Column5
+            // rasnDataGridViewTextBoxColumn
             // 
-            this.Column5.HeaderText = "Примечание";
-            this.Column5.Name = "Column5";
+            this.rasnDataGridViewTextBoxColumn.DataPropertyName = "Rasn";
+            this.rasnDataGridViewTextBoxColumn.HeaderText = "Разница";
+            this.rasnDataGridViewTextBoxColumn.Name = "rasnDataGridViewTextBoxColumn";
+            this.rasnDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // commentDataGridViewTextBoxColumn
+            // 
+            this.commentDataGridViewTextBoxColumn.DataPropertyName = "Comment";
+            this.commentDataGridViewTextBoxColumn.HeaderText = "Примечание";
+            this.commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
+            this.commentDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // monthDataGridViewTextBoxColumn
+            // 
+            this.monthDataGridViewTextBoxColumn.DataPropertyName = "Month";
+            this.monthDataGridViewTextBoxColumn.HeaderText = "Месяц";
+            this.monthDataGridViewTextBoxColumn.Name = "monthDataGridViewTextBoxColumn";
+            this.monthDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // yearDataGridViewTextBoxColumn
+            // 
+            this.yearDataGridViewTextBoxColumn.DataPropertyName = "Year";
+            this.yearDataGridViewTextBoxColumn.HeaderText = "Год";
+            this.yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
+            this.yearDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // planBindingSource
+            // 
+            this.planBindingSource.DataMember = "Plan";
+            this.planBindingSource.DataSource = this.moneyDataSetBindingSource;
+            // 
+            // moneyDataSetBindingSource
+            // 
+            this.moneyDataSetBindingSource.DataSource = this.moneyDataSet;
+            this.moneyDataSetBindingSource.Position = 0;
+            // 
+            // moneyDataSet
+            // 
+            this.moneyDataSet.DataSetName = "MoneyDataSet";
+            this.moneyDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // planTableAdapter
+            // 
+            this.planTableAdapter.ClearBeforeFill = true;
             // 
             // Plans
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(672, 395);
+            this.ClientSize = new System.Drawing.Size(1007, 395);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.domainUpDown2);
             this.Controls.Add(this.domainUpDown1);
@@ -185,18 +244,19 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Name = "Plans";
             this.Text = "Планы";
+            this.Load += new System.EventHandler(this.Plans_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.planBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moneyDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moneyDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
@@ -205,10 +265,17 @@
         private System.Windows.Forms.DomainUpDown domainUpDown1;
         private System.Windows.Forms.DomainUpDown domainUpDown2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.BindingSource moneyDataSetBindingSource;
+        private MoneyDataSet moneyDataSet;
+        private System.Windows.Forms.BindingSource planBindingSource;
+        private MoneyDataSetTableAdapters.PlanTableAdapter planTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categotyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn thinkDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn payDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rasnDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn commentDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn monthDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn yearDataGridViewTextBoxColumn;
     }
 }

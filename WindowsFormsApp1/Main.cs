@@ -12,10 +12,13 @@ namespace WindowsFormsApp1
 {
     public partial class Main : Form
     {
-        Money money = new Money();
-        Plans plans = new Plans();
-        Users users = new Users();
-        Help help = new Help();
+        private static BD dataBase = new BD();
+        public static Money money = new Money();
+        public static Plans plans = new Plans();
+        public static Users users = new Users();
+        public static Help help = new Help();
+
+        internal static BD DataBase { get => dataBase; set => dataBase = value; }
 
         public Main()
         {
@@ -29,21 +32,25 @@ namespace WindowsFormsApp1
 
         private void btnMoney_Click(object sender, EventArgs e)
         {
+            money = new Money();
             money.Show();
         }
 
         private void btnPlans_Click(object sender, EventArgs e)
         {
+            plans = new Plans();
             plans.Show();
         }
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
+            users = new Users();
             users.Show();
         }
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
+            help = new Help();
             help.Show();
         }
     }

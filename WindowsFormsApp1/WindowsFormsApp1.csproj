@@ -46,6 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BD.cs" />
+    <Compile Include="MoneyOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoneyOperation.Designer.cs">
+      <DependentUpon>MoneyOperation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Help.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,11 +71,22 @@
     <Compile Include="Money.Designer.cs">
       <DependentUpon>Money.cs</DependentUpon>
     </Compile>
+    <Compile Include="MoneyDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MoneyDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Plans.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Plans.Designer.cs">
       <DependentUpon>Plans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlansOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlansOperation.Designer.cs">
+      <DependentUpon>PlansOperation.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,6 +96,9 @@
     <Compile Include="Users.Designer.cs">
       <DependentUpon>Users.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="MoneyOperation.resx">
+      <DependentUpon>MoneyOperation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Help.resx">
       <DependentUpon>Help.cs</DependentUpon>
     </EmbeddedResource>
@@ -89,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Plans.resx">
       <DependentUpon>Plans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlansOperation.resx">
+      <DependentUpon>PlansOperation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -102,6 +126,17 @@
     <EmbeddedResource Include="Users.resx">
       <DependentUpon>Users.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="MoneyDataSet.xsc">
+      <DependentUpon>MoneyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MoneyDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MoneyDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MoneyDataSet.xss">
+      <DependentUpon>MoneyDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -114,6 +149,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Money.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

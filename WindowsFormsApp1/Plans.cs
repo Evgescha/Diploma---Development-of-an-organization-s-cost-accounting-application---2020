@@ -16,5 +16,12 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void Plans_Load(object sender, EventArgs e)
+        {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "moneyDataSet.Plan". При необходимости она может быть перемещена или удалена.
+            this.planTableAdapter.Fill(this.moneyDataSet.Plan);
+
+        }
     }
 }
