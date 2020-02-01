@@ -25,8 +25,9 @@ namespace WindowsFormsApp1
         private void Money_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "moneyDataSet.Money". При необходимости она может быть перемещена или удалена.
-            this.moneyTableAdapter.Fill(this.moneyDataSet.Money);
-
+            //this.moneyTableAdapter.Fill(this.moneyDataSet.Money);
+            string command = "SELECT Money.id as [№], Category.name as [Категория], SubCategory.name as [Подкатегория], Users.name as [Пользователь], Money.DateTime as [Дата], Money.Cost as [Стоимость], Money.Comment as [Комментарий] FROM Users INNER JOIN((Category INNER JOIN [Money] ON Category.Id = Money.Category) INNER JOIN SubCategory ON(SubCategory.id = Money.SubCategory) AND(Category.Id = SubCategory.categoryId)) ON Users.id = Money.User WHERE(([Category].[Id] =[Money].[Category]) AND([SubCategory].[id] =[Money].[SubCategory]) AND([Users].[id] =[Money].[User]));";
+            Main.DataBase.SelectGridPlus(command,dataGridView1);
         }
         // кнопка добавить
         private void button1_Click(object sender, EventArgs e)
