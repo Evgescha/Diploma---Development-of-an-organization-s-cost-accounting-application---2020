@@ -37,9 +37,9 @@
             // 
             // btnMoney
             // 
-            this.btnMoney.Location = new System.Drawing.Point(49, 26);
+            this.btnMoney.Location = new System.Drawing.Point(50, 12);
             this.btnMoney.Name = "btnMoney";
-            this.btnMoney.Size = new System.Drawing.Size(141, 23);
+            this.btnMoney.Size = new System.Drawing.Size(141, 39);
             this.btnMoney.TabIndex = 0;
             this.btnMoney.Text = "Расходы";
             this.btnMoney.UseVisualStyleBackColor = true;
@@ -47,9 +47,9 @@
             // 
             // btnPlans
             // 
-            this.btnPlans.Location = new System.Drawing.Point(49, 55);
+            this.btnPlans.Location = new System.Drawing.Point(50, 57);
             this.btnPlans.Name = "btnPlans";
-            this.btnPlans.Size = new System.Drawing.Size(141, 23);
+            this.btnPlans.Size = new System.Drawing.Size(141, 39);
             this.btnPlans.TabIndex = 1;
             this.btnPlans.Text = "Планы";
             this.btnPlans.UseVisualStyleBackColor = true;
@@ -57,9 +57,9 @@
             // 
             // btnUsers
             // 
-            this.btnUsers.Location = new System.Drawing.Point(48, 84);
+            this.btnUsers.Location = new System.Drawing.Point(50, 102);
             this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(141, 23);
+            this.btnUsers.Size = new System.Drawing.Size(141, 39);
             this.btnUsers.TabIndex = 2;
             this.btnUsers.Text = "Пользователи";
             this.btnUsers.UseVisualStyleBackColor = true;
@@ -67,9 +67,9 @@
             // 
             // btnHelp
             // 
-            this.btnHelp.Location = new System.Drawing.Point(49, 113);
+            this.btnHelp.Location = new System.Drawing.Point(50, 147);
             this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(141, 23);
+            this.btnHelp.Size = new System.Drawing.Size(141, 39);
             this.btnHelp.TabIndex = 3;
             this.btnHelp.Text = "Справочник";
             this.btnHelp.UseVisualStyleBackColor = true;
@@ -77,18 +77,19 @@
             // 
             // btnReports
             // 
-            this.btnReports.Location = new System.Drawing.Point(49, 142);
+            this.btnReports.Location = new System.Drawing.Point(50, 192);
             this.btnReports.Name = "btnReports";
-            this.btnReports.Size = new System.Drawing.Size(141, 23);
+            this.btnReports.Size = new System.Drawing.Size(141, 39);
             this.btnReports.TabIndex = 4;
             this.btnReports.Text = "Отчеты";
             this.btnReports.UseVisualStyleBackColor = true;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(254, 184);
+            this.ClientSize = new System.Drawing.Size(251, 239);
             this.Controls.Add(this.btnReports);
             this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.btnUsers);

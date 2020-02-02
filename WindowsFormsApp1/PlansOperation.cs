@@ -51,10 +51,27 @@ namespace WindowsFormsApp1
             try
             {
                 Main.DataBase.SqlCommand(command);
-                Main.money.loadData();
                 Main.plans.loadData();
             }
             catch (Exception ex) { }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsDigit(e.KeyChar)) && !((e.KeyChar == '.') &&
+          (((TextBox)sender).Text.IndexOf(".") == -1) &&
+          (((TextBox)sender).Text.Length != 0)))
+            {
+                if (e.KeyChar != (char)Keys.Back)
+                {
+                    e.Handled = true;
+                }
+            }
         }
     }
 }

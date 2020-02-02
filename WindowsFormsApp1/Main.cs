@@ -17,6 +17,7 @@ namespace WindowsFormsApp1
         public static Plans plans = new Plans();
         public static Users users = new Users();
         public static Help help = new Help();
+        public static Reports report = new Reports();
 
         internal static BD DataBase { get => dataBase; set => dataBase = value; }
 
@@ -52,6 +53,12 @@ namespace WindowsFormsApp1
         {
             help = new Help();
             help.Show();
+        }
+
+        private void btnReports_Click(object sender, EventArgs e)
+        {
+            report = new Reports();
+            report.Show();
         }
     }
 }
