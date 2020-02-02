@@ -34,6 +34,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.moneyDataSet = new WindowsFormsApp1.MoneyDataSet();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
@@ -41,11 +43,12 @@
             this.domainUpDown2 = new System.Windows.Forms.DomainUpDown();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.moneyBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.moneyDataSet = new WindowsFormsApp1.MoneyDataSet();
             this.moneyTableAdapter = new WindowsFormsApp1.MoneyDataSetTableAdapters.MoneyTableAdapter();
+            this.usersTableAdapter = new WindowsFormsApp1.MoneyDataSetTableAdapters.UsersTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moneyDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.moneyBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.moneyDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -89,11 +92,26 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DataSource = this.usersBindingSource;
+            this.comboBox1.DisplayMember = "name";
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(106, 48);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 4;
+            this.comboBox1.ValueMember = "id";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.domainUpDown1_SelectedItemChanged);
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "Users";
+            this.usersBindingSource.DataSource = this.moneyDataSet;
+            // 
+            // moneyDataSet
+            // 
+            this.moneyDataSet.DataSetName = "MoneyDataSet";
+            this.moneyDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // checkBox1
             // 
@@ -104,6 +122,7 @@
             this.checkBox1.TabIndex = 5;
             this.checkBox1.Text = "Показывать всех";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.domainUpDown1_SelectedItemChanged);
             // 
             // label2
             // 
@@ -116,23 +135,25 @@
             // 
             // domainUpDown1
             // 
-            this.domainUpDown1.Items.Add("1");
-            this.domainUpDown1.Items.Add("2");
-            this.domainUpDown1.Items.Add("3");
-            this.domainUpDown1.Items.Add("4");
-            this.domainUpDown1.Items.Add("5");
-            this.domainUpDown1.Items.Add("6");
-            this.domainUpDown1.Items.Add("7");
-            this.domainUpDown1.Items.Add("8");
-            this.domainUpDown1.Items.Add("9");
-            this.domainUpDown1.Items.Add("10");
-            this.domainUpDown1.Items.Add("11");
             this.domainUpDown1.Items.Add("12");
+            this.domainUpDown1.Items.Add("11");
+            this.domainUpDown1.Items.Add("10");
+            this.domainUpDown1.Items.Add("9");
+            this.domainUpDown1.Items.Add("8");
+            this.domainUpDown1.Items.Add("7");
+            this.domainUpDown1.Items.Add("6");
+            this.domainUpDown1.Items.Add("5");
+            this.domainUpDown1.Items.Add("4");
+            this.domainUpDown1.Items.Add("3");
+            this.domainUpDown1.Items.Add("2");
+            this.domainUpDown1.Items.Add("1");
             this.domainUpDown1.Location = new System.Drawing.Point(426, 50);
             this.domainUpDown1.Name = "domainUpDown1";
+            this.domainUpDown1.ReadOnly = true;
             this.domainUpDown1.Size = new System.Drawing.Size(55, 20);
             this.domainUpDown1.TabIndex = 7;
             this.domainUpDown1.Text = "1";
+            this.domainUpDown1.SelectedItemChanged += new System.EventHandler(this.domainUpDown1_SelectedItemChanged);
             // 
             // label3
             // 
@@ -158,9 +179,11 @@
             this.domainUpDown2.Items.Add("2030");
             this.domainUpDown2.Location = new System.Drawing.Point(545, 51);
             this.domainUpDown2.Name = "domainUpDown2";
+            this.domainUpDown2.ReadOnly = true;
             this.domainUpDown2.Size = new System.Drawing.Size(76, 20);
             this.domainUpDown2.TabIndex = 9;
             this.domainUpDown2.Text = "2020";
+            this.domainUpDown2.SelectedItemChanged += new System.EventHandler(this.domainUpDown1_SelectedItemChanged);
             // 
             // dataGridView1
             // 
@@ -179,14 +202,13 @@
             this.moneyBindingSource.DataMember = "Money";
             this.moneyBindingSource.DataSource = this.moneyDataSet;
             // 
-            // moneyDataSet
-            // 
-            this.moneyDataSet.DataSetName = "MoneyDataSet";
-            this.moneyDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // moneyTableAdapter
             // 
             this.moneyTableAdapter.ClearBeforeFill = true;
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
             // 
             // Money
             // 
@@ -207,9 +229,10 @@
             this.Name = "Money";
             this.Text = "Расходы";
             this.Load += new System.EventHandler(this.Money_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moneyDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.moneyBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.moneyDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,9 +250,11 @@
         private System.Windows.Forms.DomainUpDown domainUpDown1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DomainUpDown domainUpDown2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.DataGridView dataGridView1;
         private MoneyDataSet moneyDataSet;
         private System.Windows.Forms.BindingSource moneyBindingSource;
         private MoneyDataSetTableAdapters.MoneyTableAdapter moneyTableAdapter;
+        private System.Windows.Forms.BindingSource usersBindingSource;
+        private MoneyDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
     }
 }

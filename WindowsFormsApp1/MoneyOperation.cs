@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class MoneyOperation : Form
+    public partial class PlanOperation : Form
     {
         int id;
         // -1 значит добавить
         // остальные значить изменить
-        public MoneyOperation(int id)
+        public PlanOperation(int id)
         {
             InitializeComponent();
             this.id = id;
@@ -28,6 +28,9 @@ namespace WindowsFormsApp1
             this.usersTableAdapter.Fill(this.moneyDataSet.Users);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "moneyDataSet.Category". При необходимости она может быть перемещена или удалена.
             this.categoryTableAdapter.Fill(this.moneyDataSet.Category);
+            comboBox2.Items.Clear();
+            Main.DataBase.LoadBox($"SELECT * FROM SubCategory WHERE categoryId in (Select id from Category Where Category.name=\"{comboBox1.Text}\")", "name", comboBox2);
+
             if (id > 0) loadData();
 
         }
@@ -64,10 +67,14 @@ namespace WindowsFormsApp1
                 command = $"INSERT INTO [Money] ( [Category], [SubCategory], [User], [DateTime], [Cost], [Comment] ) VALUES ({category},{subCategory},{user},\"{dateTimePicker1.Text}\", {textBox1.Text},\"{textBox2.Text}\")";
             else
                 command = $"UPDATE [Money] SET [Category]={category}, [SubCategory]={subCategory}, [User]={user}, [DateTime]=\"{dateTimePicker1.Text}\", [Cost]={textBox1.Text}, [Comment]=\"{textBox2.Text}\" WHERE [id]={id}";
-            MessageBox.Show(command);
+            //MessageBox.Show(command);
             Console.WriteLine(command);
-            Main.DataBase.SqlCommand(command);
-
+            try
+            {
+                Main.DataBase.SqlCommand(command);
+                Main.money.loadData();
+            }
+            catch (Exception ex) { }
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
