@@ -95,18 +95,18 @@
             // 
             // domainUpDown1
             // 
-            this.domainUpDown1.Items.Add("1");
-            this.domainUpDown1.Items.Add("2");
-            this.domainUpDown1.Items.Add("3");
-            this.domainUpDown1.Items.Add("4");
-            this.domainUpDown1.Items.Add("5");
-            this.domainUpDown1.Items.Add("6");
-            this.domainUpDown1.Items.Add("7");
-            this.domainUpDown1.Items.Add("8");
-            this.domainUpDown1.Items.Add("9");
-            this.domainUpDown1.Items.Add("10");
-            this.domainUpDown1.Items.Add("11");
             this.domainUpDown1.Items.Add("12");
+            this.domainUpDown1.Items.Add("11");
+            this.domainUpDown1.Items.Add("10");
+            this.domainUpDown1.Items.Add("9");
+            this.domainUpDown1.Items.Add("8");
+            this.domainUpDown1.Items.Add("7");
+            this.domainUpDown1.Items.Add("6");
+            this.domainUpDown1.Items.Add("5");
+            this.domainUpDown1.Items.Add("4");
+            this.domainUpDown1.Items.Add("3");
+            this.domainUpDown1.Items.Add("2");
+            this.domainUpDown1.Items.Add("1");
             this.domainUpDown1.Location = new System.Drawing.Point(59, 11);
             this.domainUpDown1.Name = "domainUpDown1";
             this.domainUpDown1.ReadOnly = true;
@@ -135,6 +135,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(111, 48);
             this.dataGridView1.Name = "dataGridView1";
