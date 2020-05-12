@@ -20,6 +20,22 @@ namespace WindowsFormsApp1
             this.id = id;
         }
 
+        public Plans Plans
+        {
+            get => default(Plans);
+            set
+            {
+            }
+        }
+
+        public Money Money
+        {
+            get => default(Money);
+            set
+            {
+            }
+        }
+
         private void PlansOperation_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "moneyDataSet.Category". При необходимости она может быть перемещена или удалена.

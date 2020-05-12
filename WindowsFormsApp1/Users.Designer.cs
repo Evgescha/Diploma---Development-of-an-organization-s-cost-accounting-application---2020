@@ -74,7 +74,11 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BorrowTableAdapter = null;
             this.tableAdapterManager.CategoryTableAdapter = null;
+            this.tableAdapterManager.DohodTableAdapter = null;
+            this.tableAdapterManager.DohodTypesTableAdapter = null;
+            this.tableAdapterManager.LendTableAdapter = null;
             this.tableAdapterManager.MoneyTableAdapter = null;
             this.tableAdapterManager.PlanTableAdapter = null;
             this.tableAdapterManager.SubCategoryTableAdapter = null;
@@ -207,6 +211,9 @@
             // 
             // usersDataGridView
             // 
+            this.usersDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.usersDataGridView.AutoGenerateColumns = false;
             this.usersDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.usersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;

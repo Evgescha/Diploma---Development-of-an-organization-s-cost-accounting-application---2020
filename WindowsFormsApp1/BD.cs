@@ -23,7 +23,15 @@ namespace WindowsFormsApp1
             // при создании экземпляра класса сразу прописываем путь к бд
             connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Money.accdb;Persist Security Info = False; ";
         }
-       
+
+        public Main Main
+        {
+            get => default(Main);
+            set
+            {
+            }
+        }
+
 
         //вывести данные в грид, принимает команду и грид, в который все это выводить
         public void SelectGridPlus(string com, DataGridView dg)

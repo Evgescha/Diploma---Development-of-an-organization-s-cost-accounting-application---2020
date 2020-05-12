@@ -18,6 +18,22 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        public Main Main
+        {
+            get => default(Main);
+            set
+            {
+            }
+        }
+
+        public Main Main1
+        {
+            get => default(Main);
+            set
+            {
+            }
+        }
+
         private void Plans_Load(object sender, EventArgs e)
         {
             loadData();

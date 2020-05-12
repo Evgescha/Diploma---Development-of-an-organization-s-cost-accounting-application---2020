@@ -17,8 +17,26 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        public Main Main
+        {
+            get => default(Main);
+            set
+            {
+            }
+        }
+
+        public Main Main1
+        {
+            get => default(Main);
+            set
+            {
+            }
+        }
+
         private void Help_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "moneyDataSet.DohodTypes". При необходимости она может быть перемещена или удалена.
+            this.dohodTypesTableAdapter.Fill(this.moneyDataSet.DohodTypes);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "moneyDataSet.SubCategory". При необходимости она может быть перемещена или удалена.
             this.subCategoryTableAdapter.Fill(this.moneyDataSet.SubCategory);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "moneyDataSet.Category". При необходимости она может быть перемещена или удалена.
@@ -61,6 +79,11 @@ namespace WindowsFormsApp1
             this.categoryTableAdapter.Fill(this.moneyDataSet.Category);
             }
             catch (Exception ex) { MessageBox.Show("Ошибка сохранения категории. Проверьте данные"); }
+        }
+
+        private void сохранитьToolStripButton_Click(object sender, EventArgs e)
+        {
+            dohodTypesTableAdapter.Update(this.moneyDataSet);
         }
     }
 }

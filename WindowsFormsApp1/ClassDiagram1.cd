@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WindowsFormsApp1.BD">
+    <Position X="9" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAACAAABgAEAAAAAAAAABAAAJAAAAAA=</HashCode>
+      <FileName>BD.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp1.Borrow" Collapsed="true">
+    <Position X="6.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAQAAACBAEBASAACAAABGAAAIAAAAEEDBAQFEAAA=</HashCode>
+      <FileName>Borrow.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Dolg" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WindowsFormsApp1.Dohod" Collapsed="true">
+    <Position X="4" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>iCAEAAAAADAIABCRACiAAAAGCAw4BAACCHCBlIgACAQ=</HashCode>
+      <FileName>Dohod.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Main" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WindowsFormsApp1.DohodOperation" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gCAEAQAQACBAABASACCAAAAGCAAIAAACEECBAABEAAA=</HashCode>
+      <FileName>DohodOperation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Dohod" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WindowsFormsApp1.Dolg" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAAAAIACIgEBkQAAiAAABGYNw5BAAACPDPBYkAAAA=</HashCode>
+      <FileName>Dolg.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Main" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WindowsFormsApp1.Help" Collapsed="true">
+    <Position X="4" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAQAYAAgCAEhAMAICCEMAgTSHo4gAAAAPGIBIkRAAA=</HashCode>
+      <FileName>Help.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Main1" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WindowsFormsApp1.Lend" Collapsed="true">
+    <Position X="6.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ADQAAQAAACFAABASAACAAABGAAAIAAAAEECBAAFEAAA=</HashCode>
+      <FileName>Lend.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Dolg" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WindowsFormsApp1.Main" Collapsed="true">
+    <Position X="1.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YAAkAAgAACAEQAIABAiAQIICAAAYAAQABGAAIAAAEAA=</HashCode>
+      <FileName>Main.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp1.Money" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACABAAACIAABAQAACAAgAGAAg4gAAAAHCBlAEAAAA=</HashCode>
+      <FileName>Money.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Main1" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WindowsFormsApp1.PlanOperation" Collapsed="true">
+    <Position X="6.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BCAQARAAACAoABASAACAAAAHAAAIAAAAEMCBAAAAQgA=</HashCode>
+      <FileName>MoneyOperation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Plans" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WindowsFormsApp1.Plans" Collapsed="true">
+    <Position X="4" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAABAAACAAABAAAACAAAACAEwwgAAAAHCIlAAAAIA=</HashCode>
+      <FileName>Plans.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Main1" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WindowsFormsApp1.PlansOperation" Collapsed="true">
+    <Position X="6.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BCAQARAAACAIABASAACAAABTAAQIAACAEECAAAAAAgA=</HashCode>
+      <FileName>PlansOperation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Money" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WindowsFormsApp1.Reports" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEAOQDACAAABASAQCAAAAGAAwIgAAAEECBBAEAAAA=</HashCode>
+      <FileName>Reports.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Main1" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WindowsFormsApp1.Users" Collapsed="true">
+    <Position X="4" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEQAICAgDAIBAOCIACEMACWAAAAgAAAAACDBAQhAAQ=</HashCode>
+      <FileName>Users.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Main1" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

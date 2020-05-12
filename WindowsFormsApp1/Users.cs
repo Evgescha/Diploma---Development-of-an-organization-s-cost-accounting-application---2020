@@ -17,6 +17,22 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        public Main Main
+        {
+            get => default(Main);
+            set
+            {
+            }
+        }
+
+        public Main Main1
+        {
+            get => default(Main);
+            set
+            {
+            }
+        }
+
         private void Users_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "moneyDataSet.Users". При необходимости она может быть перемещена или удалена.
